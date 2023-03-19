@@ -8,7 +8,7 @@ const app = express();
 
 app.use(bodyParser.urlencoded({extended:true}))
 app.use(bodyParser.json())
-app.use('/user', userRoute)
+app.use('/user', userRoute);
 mongoose.Promise = global.Promise;
 mongoose.set('strictQuery', false);
 mongoose.connect(dbCOnfiguration.URL, {
@@ -27,4 +27,4 @@ app.listen(port, () => {
     console.log(`server running on port ${port}...`)
 })
 
-//server runned successfully
+//server runned successfully without any error
